@@ -7,14 +7,11 @@ if (myArgs[0] == null) {
     err = "no input."
     console.error(err)
     console.log(usage)
-    process.exit(1)
 }
-else call = myArgs[0].split("--call=")[1]
-
-if (call == null) {
-    err = "wrong input."
-    console.error(err)
-    console.log(usage)
-    process.exit(1)
+else {
+    call = myArgs[0].split("--call=")[1]
+    if (call == null || (call != "heads" && call != "tails")) {
+        console.log(usage)
+    }
+    else console.log(flipACoin(call))
 }
-else console.log(flipACoin(call))
