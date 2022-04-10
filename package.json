@@ -17,6 +17,7 @@
   "license": "GPL-3.0-or-later",
   "type": "module",
   "dependencies": {
+    "express": "^4.17.2",
     "minimist": "^1.2.5"
   }
 }

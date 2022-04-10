@@ -67,7 +67,9 @@ function countFlips(array) {
     if (array[i] == "heads") numHeads ++;
     if (array[i] == "tails") numTails ++;
   }
-  return {heads: numHeads, tails: numTails}
+  if (numTails == 0) return {'tails': numTails};
+  else if (numHeads == 0) return {'heads': numHeads};
+  else return {heads: numHeads, tails: numTails};
 }
 
 /** Flip a coin!
